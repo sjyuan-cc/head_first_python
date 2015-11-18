@@ -30,9 +30,10 @@ def read_dic_data(file_name):
         print(str(error))
         return None
 
+
 athlete_list = read_dic_data('sarah2.txt')
 
-print athlete_list.top3()
+print(athlete_list.top3())
 
 athlete_list.append('1.2')
-print athlete_list.top3()
+print(athlete_list.top3())

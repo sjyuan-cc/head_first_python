@@ -1,5 +1,5 @@
 import pickle
-from athlete_list import AthleteList
+from chapter07.athlete_list import AthleteList
 
 
 def read_dic_data(file_name):
@@ -21,7 +21,8 @@ def put_to_store(files):
         with open('athlete.pickle', 'wb') as athlete_file:
             pickle.dump(all_athletes, athlete_file)
     except IOError as error:
-        print 'File error,put to store: ' + str(error)
+        print
+        'File error,put to store: ' + str(error)
     return all_athletes
 
 
@@ -31,17 +32,17 @@ def get_from_store():
         with open('athlete.pickle', 'rb') as athlete_file:
             all_athletes = pickle.load(athlete_file)
     except IOError as error:
-        print 'File error, get from store: ' + str(error)
+        print('File error, get from store: ' + str(error))
     return all_athletes
 
 
 file_list = ['james2.txt', 'julie2.txt', 'mikey2.txt', 'sarah2.txt']
 saved_data = put_to_store(file_list)
-print saved_data
+print(saved_data)
 
 for every in saved_data:
-    print saved_data[every].name + ',' + saved_data[every].dob
+    print(saved_data[every].name + ',' + saved_data[every].dob)
 
 loaded_data = get_from_store()
 for every in loaded_data:
-    print loaded_data[every].name + ',' + loaded_data[every].dob
+    print(loaded_data[every].name + ',' + loaded_data[every].dob)

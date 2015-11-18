@@ -22,10 +22,10 @@ james = read_data('james.txt')
 julie = read_data('julie.txt')
 mikey = read_data('mikey.txt')
 sarah = read_data('sarah.txt')
-print sorted(james)
-print sorted(julie)
-print sorted(mikey)
-print sorted(sarah)
+print(sorted(james))
+print(sorted(julie))
+print(sorted(mikey))
+print(sorted(sarah))
 
 clean_james = []
 clean_julie = []
@@ -39,19 +39,19 @@ for each in james:
     clean_mikey.append(sanitize(each))
 for each in james:
     clean_sarah.append(sanitize(each))
-print sorted(clean_james)
-print sorted(clean_julie)
-print sorted(clean_mikey)
-print sorted(clean_sarah)
+print(sorted(clean_james))
+print(sorted(clean_julie))
+print(sorted(clean_mikey))
+print(sorted(clean_sarah))
 
 clean_james = [sanitize(each) for each in james]
 clean_julie = [sanitize(each) for each in julie]
 clean_mikey = [sanitize(each) for each in mikey]
 clean_sarah = [sanitize(each) for each in sarah]
-print sorted(clean_james)
-print sorted(clean_julie)
-print sorted(clean_mikey)
-print sorted(clean_sarah)
+print(sorted(clean_james))
+print(sorted(clean_julie))
+print(sorted(clean_mikey))
+print(sorted(clean_sarah))
 
 print('======manually remove duplicate======')
 unique_james = []
@@ -73,16 +73,15 @@ for each in clean_mikey:
 for each in clean_sarah:
     if each not in unique_sarah:
         unique_sarah.append(each)
-print sorted(unique_james)[0:3]
-print sorted(unique_julie)[0:3]
-print sorted(unique_mikey)[0:3]
-print sorted(unique_sarah)[0:3]
+print(sorted(unique_james)[0:3])
+print(sorted(unique_julie)[0:3])
+print(sorted(unique_mikey)[0:3])
+print(sorted(unique_sarah)[0:3])
 
 print('===========set============')
-print sorted(set(sanitize(each) for each in james))[0:3]
-print sorted(set(sanitize(each) for each in julie))[0:3]
-print sorted(set(sanitize(each) for each in mikey))[0:3]
-print sorted(set(sanitize(each) for each in sarah))[0:3]
-
+print(sorted(set(sanitize(each) for each in james))[0:3])
+print(sorted(set(sanitize(each) for each in julie))[0:3])
+print(sorted(set(sanitize(each) for each in mikey))[0:3])
+print(sorted(set(sanitize(each) for each in sarah))[0:3])
 
 print([index + 5 for index in range(10)])
