@@ -31,9 +31,9 @@ class AthleteList(list):
             return None
 
 
-athlete_list = AthleteList.read_dic_data('sarah2.txt')
+# athlete_list = AthleteList.read_dic_data('sarah2.txt')
 
-print(athlete_list.top3())
+# print(athlete_list.top3())
 
 #
 # athlete_list.append('1.2')

@@ -35,4 +35,4 @@ def read_dic_data(file_name):
         return None
 
 
-print read_dic_data('sarah2.txt').top3()
+print(read_dic_data('sarah2.txt').top3())
