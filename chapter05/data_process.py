@@ -85,3 +85,19 @@ print(sorted(set(sanitize(each) for each in mikey))[0:3])
 print(sorted(set(sanitize(each) for each in sarah))[0:3])
 
 print([index + 5 for index in range(10)])
+
+s = set(['Adam', 'Lisa', 'Bart', 'Paul'])
+print 'adam' in s
+print 'bart' in s
+
+
+def average(*args):
+    sum = 0
+    for a in args:
+        sum += a
+
+    return sum / float(len(args))
+
+
+print average(1, 2)
+print average(1, 2, 2, 3, 4)

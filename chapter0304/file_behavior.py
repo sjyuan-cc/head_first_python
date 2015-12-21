@@ -95,7 +95,6 @@ try:
 except IOError as error:
     print('File does no  exist! error : \n' + str(error))
 
-
 try:
     with open('with.txt', 'w') as with_data:
         print >> with_data, "This is with to open file"
@@ -106,5 +105,5 @@ out = open('data.out', 'w+')
 out.write("Test output....")
 out.close()
 
-
 # help(''.split(':'))
+
