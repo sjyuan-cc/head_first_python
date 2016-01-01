@@ -51,3 +51,10 @@ print sorted(['bob', 'about', 'Zoo', 'Credit'], cmp_ignore_case)
 print sorted(['bob', 'about', 'Zoo', 'Credit'], lambda s1, s2: -1 if s1.upper() < s2.upper() else 1)
 
 print (lambda x: x + 5)(3)
+
+a = [1]
+b = [(2, 2), (3, 3)]
+print a
+print b
+map(lambda x: a.extend(x), b)
+print a

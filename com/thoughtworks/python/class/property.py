@@ -1,0 +1,38 @@
+class Student(object):
+    def __init__(self, name, score):
+        self.name = name
+        self.__score = score
+
+    @property
+    def score(self):
+        return self.__score
+
+    @score.setter
+    def score(self, score):
+        if score < 0 or score > 100:
+            raise ValueError('invalid score')
+        self.__score = score
+
+    @score.deleter
+    def del_score(self):
+        del self.__score
+
+    @property
+    def grade(self):
+        if self.__score < 60:
+            return 'C'
+        if self.__score < 80:
+            return 'B'
+        if self.__score <= 100:
+            return 'A'
+
+
+s = Student('Bob', 59)
+print s.grade
+
+s.score = 60
+print s.grade
+del s.del_score
+
+s.score = 99
+print s.grade
