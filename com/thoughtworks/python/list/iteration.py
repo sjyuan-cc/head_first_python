@@ -50,6 +50,7 @@ def new_fn(f):
 def f1(x):
     return x * 2
 
+
 print f1(3)
 
 tds = [generate_tr(name, score) for name, score in d.iteritems()]
@@ -57,3 +58,7 @@ print '<table border="1">'
 print '<tr><th>Name</th><th>Score</th><tr>'
 print '\n'.join(tds)
 print '</table>'
+
+a = [x for x in range(1000) if x % 2 == 0]
+print reversed(a)
+

@@ -20,6 +20,7 @@ def performance(f):
 
 @performance
 def factorial(n):
+    time.sleep(3)
     return reduce(lambda x, y: x * y, range(1, n + 1))
 
 
